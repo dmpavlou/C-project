@@ -3,7 +3,7 @@
 
 int main(){
 
-    int firstN {3};
+    int firstN {3}; // statements always finish with ;
     int secondN {6};
 
     int sum = firstN + secondN;
