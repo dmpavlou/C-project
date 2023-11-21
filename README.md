@@ -1,2 +1,2 @@
-# C-project
+# CPPproject
 exercises on C++
