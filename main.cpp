@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 int adding_numbers(int number1, int number2){
     int result = number1 + number2;
@@ -11,7 +12,7 @@ int adding_numbers(int number1, int number2){
 }
 
 int main(){
-
+/*
     int firstN {3}; // statements always finish with ;
     int secondN {6};
 
@@ -19,9 +20,11 @@ int main(){
     std::cout << "The sum of the two numbers is: " << sum << std::endl;
     std::cout << "Once more, the sum is: " << adding_numbers(3,6) << std::endl; // Also possible. No need to save the result in a new variable.
     std::cerr << "Error. Try again!" << std::endl; //This way you print out error messeges for the user to see. Maybe you want to paint only them red later, so it's useful!
+*/
 
+//_________________________Input form user_______________________________________
 
-//_________________________Input form user_____________________________________________
+  /*
   int age;
   std::string name; // This is how we declare string variables.
      std::cout << "How old are you? " << std::endl;
@@ -31,7 +34,16 @@ int main(){
 
      std::cout << "So you are " << name << " and your age is " << age;
 
+  */
+   int age3;
+   std::string full_name;
 
+   std::cout << "Who are you? Full name please." << std::endl;
+   std::getline(std::cin, full_name);
+   std::cout << "And how old are you?" << std::endl;
+   std::cin >> age3;
+   std::cout << "So, you are " << full_name << " and your age is " << age3; 
+    
     return 0;
 
 }
