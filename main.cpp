@@ -55,7 +55,7 @@ int main(){
    std::cout << "third: " << third << std::endl;
    std::cout << "size of 1 is: " << sizeof one;
 */
- //______________________Boolean_______________________________________
+ /*______________________Boolean_______________________________________
 
 bool green = true;
 bool red = false;
@@ -74,6 +74,21 @@ else{
     std::cout << "Stop! It is red.";
 }
 
+*/
+
+/* Some fun facts about + = * /
+
+int value = 6;
+std::cout << "The initial value is: " << value << std::endl;
+
+value *=2;
+std::cout << "*=2 is the same as value *2, which is: " << value << std::endl;
+*/
+
+int one = 6;
+int two = 9;
+std::cout << std::boolalpha; //it means that you turn boolean statements from 0 and 2, to true or false!
+std::cout << "Is the first greater than the second number? " << (one > two) << std::endl;
 
 return 0;
 
