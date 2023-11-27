@@ -35,6 +35,7 @@ int main(){
      std::cout << "So you are " << name << " and your age is " << age;
 
   */
+ /*
    int age3;
    std::string full_name;
 
@@ -44,6 +45,36 @@ int main(){
    std::cin >> age3;
    std::cout << "So, you are " << full_name << " and your age is " << age3; 
     
-    return 0;
+ //_________________________Types of numbers_______________________________________
+   signed int one {4};
+   signed int two {-3};
+   unsigned int third {6}; //default is signed, unsigned means only possitive numbers
+
+   std::cout << "first: " << one << std::endl;
+   std::cout << "second: " << two << std::endl;
+   std::cout << "third: " << third << std::endl;
+   std::cout << "size of 1 is: " << sizeof one;
+*/
+ //______________________Boolean_______________________________________
+
+bool green = true;
+bool red = false;
+bool pedestrian = true;
+
+if(green){
+std::cout << "Are there pedestrian passing? 1 for True or 0 for False." << std::endl;
+std::cin >> pedestrian;
+       if (pedestrian)
+          {std::cout << "Wait until they pass!" << std::endl;}
+       else
+          {std::cout << "You are free to go." << std::endl;}
+}   
+
+else{
+    std::cout << "Stop! It is red.";
+}
+
+
+return 0;
 
 }
