@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip> // it lets you make tidy tables
 
 int adding_numbers(int number1, int number2){
     int result = number1 + number2;
@@ -74,21 +75,63 @@ else{
     std::cout << "Stop! It is red.";
 }
 
-*/
 
-/* Some fun facts about + = * /
+
+// Some fun facts about + = 
 
 int value = 6;
 std::cout << "The initial value is: " << value << std::endl;
 
 value *=2;
 std::cout << "*=2 is the same as value *2, which is: " << value << std::endl;
-*/
+
 
 int one = 6;
 int two = 9;
 std::cout << std::boolalpha; //it means that you turn boolean statements from 0 and 2, to true or false!
 std::cout << "Is the first greater than the second number? " << (one > two) << std::endl;
+
+// You can also save bool statements in variables to use later:
+
+bool the_result = (one > two);
+std::cout << the_result << std::endl;
+*/
+/*
+//______________________________Logical operators (and, or etc.)_______________________
+
+int one = 6;
+int two = 9;
+int three = 30;
+
+std::cout << std::boolalpha;
+std::cout << "Is one lesser than two AND three greater than one?:  " << ((one < two) && (three > one)) << std::endl;
+
+bool statement1 = ((two <= three) || (one != two));
+std::cout << statement1 << std::endl;
+
+*/
+
+//______________Let's print a tidy table!__________________
+//for this to work, you need to #include <iomanip> in the beginning of the programm
+
+//it's generally better to store your width info in a variable because it would suck if you changed your mind later and had to go through all of the individual lines of code to update them.
+
+int width{15};
+
+std::cout << std::left; // starting from right side
+std::cout << std::setfill('-');
+std::cout << std::setw(15) << "FULL NAME" << std::setw(15) << "AGE" << std::endl;
+std::cout << std::setw(15) << "Dimitra Pavlou" << std::setw(15) << "25" << std::endl;
+std::cout << std::setw(15) << "Anita Pania" << std::setw(15) << "54" << std::endl;
+std::cout << std::setw(15) << "Kostas Xazos" << std::setw(15) << "45" << std::endl;
+
+
+//If you set numerical values to appear in hexadecimal or something, and you want to reset, this is the hack:
+
+std::cout.unsetf(std::ios::scientific | std::ios::fixed); //Hack
+
+
+
 
 return 0;
 
