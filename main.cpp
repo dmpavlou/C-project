@@ -146,10 +146,10 @@ std::cout << "size of size_t is " << sizeof(size_t) << std::endl;
 
 //while loops
 
-const size_t COUNT{10}; //this way you avoid hard-coding!
+const unsigned int COUNT{10}; //this way you avoid hard-coding!
 unsigned int i{0};
 
-while(i < COUNT );{
+while(i < COUNT ){
   std::cout << "another thing to print many times..." << std::endl;
   ++i;
 }
