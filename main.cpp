@@ -130,16 +130,31 @@ std::cout << std::setw(15) << "Kostas Xazos" << std::setw(15) << "45" << std::en
 std::cout.unsetf(std::ios::scientific | std::ios::fixed); //Hack
 */
 
-/*LOOOOOOPS!
+/*_______________________LOOOOOOPS!___________________________________________________
 
+//for loops:
 const size_t COUNT{10}; // we use const to tell the compiller that this value is not to be changed.
-for(size_t i{}; i < COUNT; ++i){  //size_t is a type of unsigned int that is used in loops-it's a representation of the size of things. ++i is the increment
+for(size_t i{}; i < COUNT; ++i){  //i is for iterator, size_t is a type of unsigned int that is used in loops-it's a representation of the size of things. ++i is the increment
   std::cout << "Let's print this many times" << std::endl;
 }
-*/
+
 
 //let's check the size of size_t
 std::cout << "size of size_t is " << sizeof(size_t) << std::endl;
+
+*/
+
+//while loops
+
+const size_t COUNT{10}; //this way you avoid hard-coding!
+unsigned int i{0};
+
+while(i < COUNT );{
+  std::cout << "another thing to print many times..." << std::endl;
+  ++i;
+}
+
+std::cout << "Now the loop is complete and the current value of i is: " << i << std::endl;
 
 return 0;
 
