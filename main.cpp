@@ -111,7 +111,7 @@ std::cout << statement1 << std::endl;
 
 */
 
-//______________Let's print a tidy table!__________________
+/*______________Let's print a tidy table!__________________
 //for this to work, you need to #include <iomanip> in the beginning of the programm
 
 //it's generally better to store your width info in a variable because it would suck if you changed your mind later and had to go through all of the individual lines of code to update them.
@@ -125,13 +125,16 @@ std::cout << std::setw(15) << "Dimitra Pavlou" << std::setw(15) << "25" << std::
 std::cout << std::setw(15) << "Anita Pania" << std::setw(15) << "54" << std::endl;
 std::cout << std::setw(15) << "Kostas Xazos" << std::setw(15) << "45" << std::endl;
 
-
 //If you set numerical values to appear in hexadecimal or something, and you want to reset, this is the hack:
 
 std::cout.unsetf(std::ios::scientific | std::ios::fixed); //Hack
+*/
 
+//LOOOOOOPS!
 
-
+for(unsigned int i{}; i < 10; ++i){
+  std::cout << "Let's print this many times" << std::endl;
+}
 
 return 0;
 
