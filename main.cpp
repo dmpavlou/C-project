@@ -142,19 +142,38 @@ for(size_t i{}; i < COUNT; ++i){  //i is for iterator, size_t is a type of unsig
 //let's check the size of size_t
 std::cout << "size of size_t is " << sizeof(size_t) << std::endl;
 
-*/
+//while loops_______________________
 
-//while loops
-
-const unsigned int COUNT{10}; //this way you avoid hard-coding!
+const unsigned int COUNT{10}; //this way you avoid hard-coding! we usually write constant values with UPPERCASE
 unsigned int i{0};
 
-while(i < COUNT ){
+while(i < COUNT ){   
   std::cout << "another thing to print many times..." << std::endl;
   ++i;
 }
 
 std::cout << "Now the loop is complete and the current value of i is: " << i << std::endl;
+
+
+//do while loops_______________________
+
+const int COUNT{10};
+size_t i{0};
+
+do{
+  std::cout << i << ": again...let's print" << std::endl;
+  ++i;
+}while(i < COUNT);
+*/
+
+//__________________________________________Arrays_____________________________________________
+
+double scores[10]; //declaration of the array. here you say that you want an array of 10 foat numbers(double, for more precision in floating points)
+
+for(size_t i(0); i < 10; ++i){
+  std::cout << "scores[" << i << "] is: " << scores[i] << std::endl;
+}
+std::cout << "Loop is done, we read all the saved junk values of the array called scores." << std::endl;
 
 return 0;
 
