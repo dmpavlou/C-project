@@ -130,11 +130,16 @@ std::cout << std::setw(15) << "Kostas Xazos" << std::setw(15) << "45" << std::en
 std::cout.unsetf(std::ios::scientific | std::ios::fixed); //Hack
 */
 
-//LOOOOOOPS!
+/*LOOOOOOPS!
 
-for(unsigned int i{}; i < 10; ++i){
+const size_t COUNT{10}; // we use const to tell the compiller that this value is not to be changed.
+for(size_t i{}; i < COUNT; ++i){  //size_t is a type of unsigned int that is used in loops-it's a representation of the size of things. ++i is the increment
   std::cout << "Let's print this many times" << std::endl;
 }
+*/
+
+//let's check the size of size_t
+std::cout << "size of size_t is " << sizeof(size_t) << std::endl;
 
 return 0;
 
