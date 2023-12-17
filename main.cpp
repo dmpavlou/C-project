@@ -169,12 +169,54 @@ do{
 //__________________________________________Arrays_____________________________________________
 
 double scores[10]; //declaration of the array. here you say that you want an array of 10 foat numbers(double, for more precision in floating points)
-
+/*
 for(size_t i(0); i < 10; ++i){
   std::cout << "scores[" << i << "] is: " << scores[i] << std::endl;
 }
 std::cout << "Loop is done, we read all the saved junk values of the array called scores." << std::endl;
 
-return 0;
+// filling an array with data
 
+scores[0] = 32;
+scores[1] = 8000;
+scores[2] = 2.777;
+scores[3] = -0.01;
+
+std::cout << "the first, second, third and fourth numbers in the array are: " << scores[0] << ", " << scores[1] <<std::endl;
+std::cout << scores[2] << " and " << scores[3] << std::endl;
+*/
+
+// finding the size of an array in runtime
+
+int seira[] {0, 5, 9, 6, 7, 33, 8};
+
+std::cout << "the size of the array called seira is: " << std::size(seira) << std::endl;
+// to print all the elements of an array without knowing the length in advance:
+
+int COUNT{std::size(seira)};
+
+for (size_t i{0}; i < COUNT; ++i){
+  std::cout << "Element number " << i + 1 << " is: " << seira[i] << std::endl; // DYNAMIC structure
+}
+
+// Example of the range-based for loop. This just automatcally prints all the elements of an array, no matter how many those are.
+//The downside: we lose the index of the elements. If you need indexes, do the above version.
+    int numbers[] = {1, 2, 3, 4, 5};
+    // Syntax
+    for (int number : numbers) {
+        // 'number' takes on the value of each element in the array in each iteration
+        std::cout << number << " ";
+    }
+
+/*
+
+// + - / * and other calculations with array elements
+
+int sum1{seira[0] + seira[1]};
+int sum2{seira[2] + seira[3]};
+int sum3{seira[4] + seira[5]};
+
+std::cout << "the 3 sums are: " << sum1 << ", " << sum2 << ", " << sum3 << std::endl;
+*/
+return 0;
 }
