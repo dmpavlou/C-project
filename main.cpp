@@ -2,6 +2,7 @@
 #include <string>
 #include <iomanip> // it lets you make tidy tables
 
+
 int adding_numbers(int number1, int number2){
     int result = number1 + number2;
     return result;
@@ -166,10 +167,11 @@ do{
 }while(i < COUNT);
 */
 
-//__________________________________________Arrays_____________________________________________
+
+/*__________________________________________Arrays_____________________________________________
 
 double scores[10]; //declaration of the array. here you say that you want an array of 10 foat numbers(double, for more precision in floating points)
-/*
+
 for(size_t i(0); i < 10; ++i){
   std::cout << "scores[" << i << "] is: " << scores[i] << std::endl;
 }
@@ -184,7 +186,7 @@ scores[3] = -0.01;
 
 std::cout << "the first, second, third and fourth numbers in the array are: " << scores[0] << ", " << scores[1] <<std::endl;
 std::cout << scores[2] << " and " << scores[3] << std::endl;
-*/
+
 
 // finding the size of an array in runtime
 
@@ -208,8 +210,6 @@ for (size_t i{0}; i < COUNT; ++i){
         std::cout << number << " ";
     }
 
-/*
-
 // + - / * and other calculations with array elements
 
 int sum1{seira[0] + seira[1]};
@@ -218,5 +218,29 @@ int sum3{seira[4] + seira[5]};
 
 std::cout << "the 3 sums are: " << sum1 << ", " << sum2 << ", " << sum3 << std::endl;
 */
+
+// __________________________CHARACTER ARRAYS_________________________________
+//you can print this type of arrays by writing the name in the std::cout, like you would do with a variable
+
+char word[]{'H','e','l','l','o'}; //it will take the size of the amount of elements
+std::cout << "Our word of the day is: " << word << std::endl; //BUT if we print, it adds garbage values to the end!
+//it is because our string is not a C-string. A C-string, so, a "legal" string in C++ has to end with a '/0'
+//the last character of the array has to be '/0', so that the compiller knows it's the end of the string.
+
+//CORRECT WAY
+char word1[]{'H','e','l','l','o','\0'}; //null terminated = C-string
+std::cout << "Our word of the day is: " << word1 << std::endl;
+
+//OR
+char word2[6]{'H','e','l','l','o'}; //if you initialize the array with one extra element, the compiller is going to autofill '/0'
+std::cout << "Our word of the day is: " << word2 << std::endl;
+
+//BEST WAY
+char word3[]{"Hello"}; //when we use "" the compiller null terminates automatically
+std::cout << "Our word of the day is: " << word3 << std::endl;
+
+char word4[]{"Hello everyone! I can be a full sentence too!"};
+std::cout << "Our phrase of the day is: " << word4 << std::endl; 
+
 return 0;
 }
