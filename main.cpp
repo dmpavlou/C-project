@@ -1,135 +1,19 @@
 #include <iostream>
-#include <string>
-#include <iomanip> // it lets you make tidy tables
+// #include <string>
+// #include <iomanip> // it lets you make tidy tables
 
 
-int adding_numbers(int number1, int number2){
+/*int adding_numbers(int number1, int number2){
     int result = number1 + number2;
     return result;
-    /*
     This is a function, exactly like the main one. You can recall it inside the main one.
     VERY convinient, since this way you can have some processes already done and compressed
     in a singe phrase something(x, y) instead of filling the main one with more things.
-    */
-}
+    } */
 
 int main(){
-/*
-    int firstN {3}; // statements always finish with ;
-    int secondN {6};
 
-    int sum = adding_numbers(3, 6);  // Ηere we recall the function for adding numbers and store the result in "gsum". No need to do the + here!
-    std::cout << "The sum of the two numbers is: " << sum << std::endl;
-    std::cout << "Once more, the sum is: " << adding_numbers(3,6) << std::endl; // Also possible. No need to save the result in a new variable.
-    std::cerr << "Error. Try again!" << std::endl; //This way you print out error messeges for the user to see. Maybe you want to paint only them red later, so it's useful!
-*/
-
-//_________________________Input form user_______________________________________
-
-  /*
-  int age;
-  std::string name; // This is how we declare string variables.
-     std::cout << "How old are you? " << std::endl;
-     std::cin >> age;
-     std::cout << "And what is your name?" << std::endl;
-     std::cin >> name;
-
-     std::cout << "So you are " << name << " and your age is " << age;
-
-  */
- /*
-   int age3;
-   std::string full_name;
-
-   std::cout << "Who are you? Full name please." << std::endl;
-   std::getline(std::cin, full_name);
-   std::cout << "And how old are you?" << std::endl;
-   std::cin >> age3;
-   std::cout << "So, you are " << full_name << " and your age is " << age3; 
-    
- //_________________________Types of numbers_______________________________________
-   signed int one {4};
-   signed int two {-3};
-   unsigned int third {6}; //default is signed, unsigned means only possitive numbers
-
-   std::cout << "first: " << one << std::endl;
-   std::cout << "second: " << two << std::endl;
-   std::cout << "third: " << third << std::endl;
-   std::cout << "size of 1 is: " << sizeof one;
-*/
- /*______________________Boolean_______________________________________
-
-bool green = true;
-bool red = false;
-bool pedestrian = true;
-
-if(green){
-std::cout << "Are there pedestrian passing? 1 for True or 0 for False." << std::endl;
-std::cin >> pedestrian;
-       if (pedestrian)
-          {std::cout << "Wait until they pass!" << std::endl;}
-       else
-          {std::cout << "You are free to go." << std::endl;}
-}   
-
-else{
-    std::cout << "Stop! It is red.";
-}
-
-
-
-// Some fun facts about + = 
-
-int value = 6;
-std::cout << "The initial value is: " << value << std::endl;
-
-value *=2;
-std::cout << "*=2 is the same as value *2, which is: " << value << std::endl;
-
-
-int one = 6;
-int two = 9;
-std::cout << std::boolalpha; //it means that you turn boolean statements from 0 and 2, to true or false!
-std::cout << "Is the first greater than the second number? " << (one > two) << std::endl;
-
-// You can also save bool statements in variables to use later:
-
-bool the_result = (one > two);
-std::cout << the_result << std::endl;
-*/
-/*
-//______________________________Logical operators (and, or etc.)_______________________
-
-int one = 6;
-int two = 9;
-int three = 30;
-
-std::cout << std::boolalpha;
-std::cout << "Is one lesser than two AND three greater than one?:  " << ((one < two) && (three > one)) << std::endl;
-
-bool statement1 = ((two <= three) || (one != two));
-std::cout << statement1 << std::endl;
-
-*/
-
-/*______________Let's print a tidy table!__________________
-//for this to work, you need to #include <iomanip> in the beginning of the programm
-
-//it's generally better to store your width info in a variable because it would suck if you changed your mind later and had to go through all of the individual lines of code to update them.
-
-int width{15};
-
-std::cout << std::left; // starting from right side
-std::cout << std::setfill('-');
-std::cout << std::setw(15) << "FULL NAME" << std::setw(15) << "AGE" << std::endl;
-std::cout << std::setw(15) << "Dimitra Pavlou" << std::setw(15) << "25" << std::endl;
-std::cout << std::setw(15) << "Anita Pania" << std::setw(15) << "54" << std::endl;
-std::cout << std::setw(15) << "Kostas Xazos" << std::setw(15) << "45" << std::endl;
-
-//If you set numerical values to appear in hexadecimal or something, and you want to reset, this is the hack:
-
-std::cout.unsetf(std::ios::scientific | std::ios::fixed); //Hack
-*/
+//...deleted previous stages
 
 /*_______________________LOOOOOOPS!___________________________________________________
 
@@ -241,7 +125,7 @@ std::cout << "Our word of the day is: " << word3 << std::endl;
 
 char word4[]{"Hello everyone! I can be a full sentence too!"};
 std::cout << "Our phrase of the day is: " << word4 << std::endl; 
-*/
+
 
 //___________________POINTERS______________________
 
@@ -258,19 +142,19 @@ double * p_fractional_number1{nullptr};
 
 
 /*all pointers have the same size, regardless of whether they store the address of an int, double, float etc.
-that's becaue they store the same type of data, which is an address!*/
+that's becaue they store the same type of data, which is an address!
 
 //let's store data in a pointer!
 
 int number{22};      
-int *p_int2{&number};   // assign data when declaring     !!!the & means address of!!!
+int* p_int2{&number};   // assign data when declaring     !!!the & means address of!!!
 
 std::cout << "The number in my variable is: " << number << std::endl;
 std::cout << "The address of my variable is: " << p_int2 << std::endl;
 
 
 float other_number{3.02};
-float *p_float{&other_number};
+float* p_float{&other_number};
 
 std::cout << "The number in my float variable is: " << other_number << std::endl;
 std::cout << "The address of my float variable is: " << p_float << std::endl;
@@ -278,9 +162,50 @@ std::cout << "The address of my float variable is: " << p_float << std::endl;
 //OR change the value later
 
 int num2{6666};
+int* p_int2{nullptr};
 p_int2 = &num2;
+
 std::cout << "The address of my initial int variable changed and is now: " << p_int2 << std::endl;
 
+//DEREFERENCING A POINTER: we can print out the value that is stored in the address we saved in our pointer, by including * infront of the name:
+std::cout << "The value in the above address is " << *p_int2 << std::endl;
 
+
+//________________________Pointer to Char________________________
+//when I initialize a pointer with a string of characters, it now functions as a char array and can be printed out
+
+const char* message{"Hello everybody!"};  //has to be declared as const, it treats the things inside the brackets as constant characters, you cannot change this later!
+                                          //if you want to be able to change these, use a character array like this:
+                                          char phrase[]{"Hello everybody!"};
+                                          phrase[1] = 'a';
+                                          std::cout << phrase << std::endl;
+
+std::cout << "The messsage is: " << message 
+          << " and the pointer points to the first character, which is: " << *message << std::endl;
+               
+*/
+//_____________DYNAMIC MEMORY ALLOCATION: Stack VS Heap____________________
+
+/*everything we did up to now, var, int, char, functions ALL, were stored in the STACK part of memory.
+NOW we can use pointers to exploit the HEAP part!
+STACK: less control over the lifecycle of a variable
+HEAP: full control over it, by "new" or "delete".
+*/
+{
+int number{26};           //STACK MEMORY. out of the {} the variables DON'T EXIST.
+int* p_number{nullptr};  
+p_number = &number;
+}
+
+//BUT
+
+int* p_number{nullptr}; // stack...
+p_number = new int;    //...HEAP MEMORY. now whatever we store there is going to be in the HEAP part 
+
+*p_number = 66;
+
+std::cout << "now I have in the address " << p_number << " of HEAP memory, the following value stored: "
+          << *p_number << std::endl;
+          
 return 0;
 }
