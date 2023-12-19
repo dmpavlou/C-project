@@ -217,7 +217,7 @@ int sum2{seira[2] + seira[3]};
 int sum3{seira[4] + seira[5]};
 
 std::cout << "the 3 sums are: " << sum1 << ", " << sum2 << ", " << sum3 << std::endl;
-*/
+
 
 // __________________________CHARACTER ARRAYS_________________________________
 //you can print this type of arrays by writing the name in the std::cout, like you would do with a variable
@@ -241,6 +241,46 @@ std::cout << "Our word of the day is: " << word3 << std::endl;
 
 char word4[]{"Hello everyone! I can be a full sentence too!"};
 std::cout << "Our phrase of the day is: " << word4 << std::endl; 
+*/
+
+//___________________POINTERS______________________
+
+//declare and initialize
+
+int * p_number{}; //the * is what makes it a pointer and the name should start with p_
+                  //pointers are a kind of variable that store the memory "address" of another variable.
+double * p_fractional_number{}; //they are initialized aytomatically with something that means they have no address stored yet
+
+//can also be
+
+int * p_int1{nullptr};     //nullptr = null pointer value
+double * p_fractional_number1{nullptr}; 
+
+
+/*all pointers have the same size, regardless of whether they store the address of an int, double, float etc.
+that's becaue they store the same type of data, which is an address!*/
+
+//let's store data in a pointer!
+
+int number{22};      
+int *p_int2{&number};   // assign data when declaring     !!!the & means address of!!!
+
+std::cout << "The number in my variable is: " << number << std::endl;
+std::cout << "The address of my variable is: " << p_int2 << std::endl;
+
+
+float other_number{3.02};
+float *p_float{&other_number};
+
+std::cout << "The number in my float variable is: " << other_number << std::endl;
+std::cout << "The address of my float variable is: " << p_float << std::endl;
+
+//OR change the value later
+
+int num2{6666};
+p_int2 = &num2;
+std::cout << "The address of my initial int variable changed and is now: " << p_int2 << std::endl;
+
 
 return 0;
 }
