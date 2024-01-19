@@ -190,7 +190,7 @@ std::cout << "The messsage is: " << message
 NOW we can use pointers to exploit the HEAP part!
 STACK: less control over the lifecycle of a variable
 HEAP: full control over it, by "new" or "delete".
-*/
+
 {
 int number{26};           //STACK MEMORY. out of the {} the variables DON'T EXIST.
 int* p_number{nullptr};  
@@ -206,6 +206,26 @@ p_number = new int;    //...HEAP MEMORY. now whatever we store there is going to
 
 std::cout << "now I have in the address " << p_number << " of HEAP memory, the following value stored: "
           << *p_number << std::endl;
-          
+
+//When you don't need it anymore, you have to return the memory back to the Operating System (OS):
+ 
+delete p_number;  //do this only ONCE, twice is BAD
+p_number = nullptr; //ALWAYS RESET your pointers after you delete them.
+                    //it is safer for other people to use, because it is BAD to use a pointer pointing to a junk address
+
+//other ways to initialize pointers in a way they point to HEAP from the beginning
+
+int* p_somehting{new int}; //nullptr in HEAP (4 bytes because it's int pointer)
+//or
+int* p_another{new int {21}};  //21 in HEAP (4 bytes because it's int pointer)
+*/
+
+//_____________TRY-CATCH_____________
+
+int * data = new int[1000000000];
+
+
+std::cout << "Program ends well!" << std::endl;
+
 return 0;
 }
