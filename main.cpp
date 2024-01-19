@@ -222,8 +222,16 @@ int* p_another{new int {21}};  //21 in HEAP (4 bytes because it's int pointer)
 
 //_____________TRY-CATCH_____________
 
-int * data = new int[1000000000];
+int * data = new int[100000000]; //if the memory we request to use on the heap is too big and we run out, the program will crash.
 
+//solutions: 1) Exception mechanism  2) std::nothrough
+
+//1)
+ try{
+
+ }catch(std::exception& ex){
+
+ }
 
 std::cout << "Program ends well!" << std::endl;
 
