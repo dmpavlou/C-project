@@ -226,14 +226,26 @@ int * data = new int[100000000]; //if the memory we request to use on the heap i
 
 //solutions: 1) Exception mechanism  2) std::nothrough
 
-//1)
+//1) Exception
  try{
-
+  // something that can fail
  }catch(std::exception& ex){
-
+  std::cout << "Something went wrong: " << ex.what() << std::endl;
+  // in case it fails, catch the problem and don't crash the programm
  }
 
-std::cout << "Program ends well!" << std::endl;
 
+//2) std::nothrow
+for(size_t i{0} ; i < 100 ; ++i){
+
+  int * data = new(std::nothrow) int[10000000000];
+
+  if(data!=nullptr){
+    std::cout << "Data allocated" << std::endl;
+  }else{
+    std::cout << "Data allocation failed" << std::endl;
+  }
+}
+std::cout << "Program ends well!" << std::endl;
 return 0;
 }
