@@ -218,9 +218,9 @@ p_number = nullptr; //ALWAYS RESET your pointers after you delete them.
 int* p_somehting{new int}; //nullptr in HEAP (4 bytes because it's int pointer)
 //or
 int* p_another{new int {21}};  //21 in HEAP (4 bytes because it's int pointer)
-*/
 
-//_____________TRY-CATCH_____________
+
+//_____________TRY-CATCH_____________IN CASE THE NEW OPPERATOR FAILS!
 
 int * data = new int[100000000]; //if the memory we request to use on the heap is too big and we run out, the program will crash.
 
@@ -246,6 +246,22 @@ for(size_t i{0} ; i < 100 ; ++i){
     std::cout << "Data allocation failed" << std::endl;
   }
 }
+*/
+
+//REFERENCES: aliases of data
+
+int something = 5;
+  //references
+  int& ref_something{something};
+
+std::cout << something << std::endl;
+std::cout << ref_something << std::endl;
+
+
+
+
+
+
 std::cout << "Program ends well!" << std::endl;
 return 0;
 }
